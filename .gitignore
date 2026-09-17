@@ -1,0 +1,11 @@
+bin/
+data/
+*.o
+.vscode/
+.idea/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
