@@ -1,6 +1,6 @@
-# EBPFCA — Linux eBPF Root Cause Analysis Platform
+# Pulse — Linux eBPF Root Cause Analysis Platform
 
-EBPFCA is a single-host Linux observability platform. It combines a Go agent, eBPF tracepoints, Prometheus, and Grafana to show real-time host health and produce evidence-backed, rule-based incident reports.
+Pulse is a single-host Linux observability platform. It combines a Go agent, eBPF tracepoints, Prometheus, and Grafana to show real-time host health and produce evidence-backed, rule-based incident reports.
 
 It is deliberately scoped for one Fedora/Linux host: no cloud service, Kubernetes cluster, external database, or machine-learning dependency is required.
 
