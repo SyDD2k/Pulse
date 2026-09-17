@@ -1,15 +1,3 @@
-# EBPFCA HOWTO
-
-## In simple words
-
-Think of your computer as a factory. CPU is the workforce, memory is the workspace, disk is the warehouse, and the network is the delivery road. EBPFCA watches those parts. When one looks unhealthy, it creates a short report saying what it saw and why it suspects a particular problem.
-
-The project has three running pieces:
-
-1. **EBPFCA agent** — runs on the Linux host and collects readings every second.
-2. **Prometheus** — saves a time series of those readings every five seconds.
-3. **Grafana** — draws the charts in the browser.
-
 ## What each major folder does
 
 - `bpf/`: the small C programs that attach safely to Linux kernel tracepoints.
