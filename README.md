@@ -80,9 +80,7 @@ examples/               representative incident reports and test scenarios
 
 ## Documentation
 
-- [HOWTO.md](HOWTO.md): plain-language complete operating guide.
 - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md): component and data-flow details.
-- [docs/STUDY-NOTES.md](docs/STUDY-NOTES.md): project interview preparation.
 
 ## Current limitations
 
