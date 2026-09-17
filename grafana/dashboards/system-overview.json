@@ -1,0 +1,18 @@
+{
+  "uid": "ebpfca-system",
+  "title": "EBPFCA · System Overview",
+  "tags": ["ebpfca", "linux", "observability"],
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "5s",
+  "time": {"from": "now-15m", "to": "now"},
+  "panels": [
+    {"id": 1, "type": "timeseries", "title": "CPU utilization", "datasource": {"uid": "prometheus"}, "gridPos": {"h": 8, "w": 12, "x": 0, "y": 0}, "targets": [{"refId": "A", "expr": "ebpfca_host_cpu_percent", "legendFormat": "CPU"}], "fieldConfig": {"defaults": {"unit": "percent", "min": 0, "max": 100}}},
+    {"id": 2, "type": "timeseries", "title": "Memory used", "datasource": {"uid": "prometheus"}, "gridPos": {"h": 8, "w": 12, "x": 12, "y": 0}, "targets": [{"refId": "A", "expr": "ebpfca_host_memory_used_percent", "legendFormat": "Memory"}], "fieldConfig": {"defaults": {"unit": "percent", "min": 0, "max": 100}}},
+    {"id": 3, "type": "stat", "title": "1-minute load", "datasource": {"uid": "prometheus"}, "gridPos": {"h": 5, "w": 6, "x": 0, "y": 8}, "targets": [{"refId": "A", "expr": "ebpfca_host_load1"}]},
+    {"id": 4, "type": "stat", "title": "Established TCP connections", "datasource": {"uid": "prometheus"}, "gridPos": {"h": 5, "w": 6, "x": 6, "y": 8}, "targets": [{"refId": "A", "expr": "ebpfca_tcp_connections"}]},
+    {"id": 5, "type": "stat", "title": "Available memory", "datasource": {"uid": "prometheus"}, "gridPos": {"h": 5, "w": 6, "x": 12, "y": 8}, "targets": [{"refId": "A", "expr": "ebpfca_host_memory_available_kb"}], "fieldConfig": {"defaults": {"unit": "kbytes"}}},
+    {"id": 6, "type": "stat", "title": "Disk latency", "datasource": {"uid": "prometheus"}, "gridPos": {"h": 5, "w": 6, "x": 18, "y": 8}, "targets": [{"refId": "A", "expr": "ebpfca_disk_latency_ms"}], "fieldConfig": {"defaults": {"unit": "ms"}}},
+    {"id": 7, "type": "timeseries", "title": "Kernel pressure signals", "datasource": {"uid": "prometheus"}, "gridPos": {"h": 8, "w": 24, "x": 0, "y": 13}, "targets": [{"refId": "A", "expr": "ebpfca_context_switches_per_sec", "legendFormat": "Context switches / sec"}, {"refId": "B", "expr": "ebpfca_page_faults_per_sec", "legendFormat": "Page faults / sec"}]}
+  ]
+}

@@ -1,0 +1,16 @@
+listen_addr: ":9090"
+metrics_path: "/metrics"
+bpf_object_path: "bpf/ebpfca.bpf.o"
+incident_dir: "data/incidents"
+host_sample_interval: 1s
+rca_interval: 10s
+incident_cooldown: 2m
+
+thresholds:
+  cpu_percent_high: 85.0
+  memory_percent_high: 90.0
+  context_switch_rate_high: 20000.0
+  page_fault_rate_high: 5000.0
+  disk_latency_ms_high: 50.0
+  process_cpu_percent_high: 70.0
+  network_throughput_mbps_high: 800.0

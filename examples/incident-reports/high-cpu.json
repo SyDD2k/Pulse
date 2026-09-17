@@ -1,0 +1,13 @@
+{
+  "incident": "High CPU Usage",
+  "suspected_process": "stress-ng-cpu",
+  "root_cause": "Excessive context switching",
+  "confidence": "high",
+  "evidence": [
+    "CPU 96.0%",
+    "Load average 8.42",
+    "Context switches 30000/sec",
+    "PID 1234 consuming 82.0% CPU"
+  ],
+  "severity": "critical"
+}

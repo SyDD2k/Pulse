@@ -1,0 +1,14 @@
+{
+  "uid": "ebpfca-cpu",
+  "title": "EBPFCA · CPU Analysis",
+  "tags": ["ebpfca", "cpu"],
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "5s",
+  "time": {"from": "now-15m", "to": "now"},
+  "panels": [
+    {"id": 1, "type": "timeseries", "title": "Host CPU", "datasource": {"uid": "prometheus"}, "gridPos": {"h": 8, "w": 24, "x": 0, "y": 0}, "targets": [{"refId": "A", "expr": "ebpfca_host_cpu_percent", "legendFormat": "CPU"}], "fieldConfig": {"defaults": {"unit": "percent", "min": 0, "max": 100}}},
+    {"id": 2, "type": "timeseries", "title": "Top processes by CPU", "datasource": {"uid": "prometheus"}, "gridPos": {"h": 10, "w": 24, "x": 0, "y": 8}, "targets": [{"refId": "A", "expr": "topk(10, ebpfca_process_cpu_percent)", "legendFormat": "{{comm}} · {{pid}}"}], "fieldConfig": {"defaults": {"unit": "percent", "min": 0}}},
+    {"id": 3, "type": "timeseries", "title": "Scheduler activity", "datasource": {"uid": "prometheus"}, "gridPos": {"h": 8, "w": 24, "x": 0, "y": 18}, "targets": [{"refId": "A", "expr": "ebpfca_context_switches_per_sec", "legendFormat": "Context switches / sec"}]}
+  ]
+}
